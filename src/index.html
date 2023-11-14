@@ -1,17 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+  <title>My Holy Grail Layout</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* Center the video horizontally and vertically */
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 360px; /* Adjust the height as needed */
+    }
+    
+    iframe {
+      max-width: 100%;
+    }
+  </style>
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
 
+<div id="contactPopup" class="popup">
+  <div class="popup-content">
+    <span class="close" id="closePopup">&times;</span>
+    <h2>Contact Information</h2>
+    <p><strong>Name:</strong> Sai Yashwanth Ravulapati</p>
+    <p><strong>Email:</strong> sr2977@nau.edu</p>
+    <p><strong>Phone Number:</strong> +1 (928) 679 3635</p>
+  </div>
+</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a button id="openContactButton" onclick="openContactPopup()">Contact</button></a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>Interactive JavaScript Thingy</h2>
+    <input type="text" id="inputNumber" placeholder="Enter a number">
+    <button id="calculateButton">Calculate Factorial</button>
+    <p id="result"></p>
+
+<!-- YouTube Video Above Footer, Centered -->
+  <div class="video-container">
+    <iframe width="540" height="360" src="https://www.youtube.com/embed/eXcJOgNPYJE" frameborder="0" allowfullscreen></iframe>
+  </div>
+  </main>
+  <aside>
+    <a href="https://www.amazon.com" target="_blank">
+      <img src="head.jpg" alt="Amazon Ad">
+    </a>
+  </aside>
+
+  <footer>
+  <p>
+    <strong>Addendum:</strong><br>
+    I tackled the challenge of implementing a factorial calculator using JavaScript. The goal was to create an interactive tool that calculates the factorial of a number provided by the user.
+
+    To solve this problem, I employed a recursive function. When the user enters a number and clicks the "Calculate Factorial" button, the JavaScript code calculates the factorial by multiplying the number by the factorial of the previous number, decrementing until it reaches 1. This approach ensures accurate factorial calculation.
+
+    During the development process, I encountered a few challenges. One of the issues was handling invalid inputs. To address this, I included validation to ensure that the input is a valid number. If the user provides an invalid input, a user-friendly error message is displayed.
+
+    Additionally, I worked on improving the user interface by providing clear instructions and feedback. I added a placeholder in the input field and a result area to display the calculated factorial.
+
+    Overall, this project allowed me to enhance my JavaScript skills and develop a useful interactive tool. If you encounter any issues or have suggestions for further improvement, please don't hesitate to reach out.
+  </p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
